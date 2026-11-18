@@ -1,34 +1,36 @@
 <h2 align="center">
-  <a href="https://github.com/NeilRandy/NodePerch/releases/download/v0.5.0-preview.14/NodePerch-0.5.0-preview.14-win-x64.zip">⬇ 下载 Windows 版 · 协作预览版</a>
+  <a href="https://github.com/NeilRandy/NodePerch/releases">⬇ 下载 Windows 版 · 协作预览版</a>
 </h2>
 <p align="center">
-  v0.5.0-preview.14 · Windows x64 · 非商业许可<br>
+  使用说明适用 v0.5.0-preview.31 · Windows x64 · 非商业许可<br>
   <a href="#安装与连接">安装与连接</a> ·
   <a href="使用说明.md">使用说明</a> ·
   <a href="协作使用指南.md">协作指南</a> ·
   <a href="https://github.com/NeilRandy/NodePerch/releases">全部版本</a>
 </p>
 
-![NodePerch：五秒采样、十分钟历史曲线、多机总览与主机协作](images/hero.png)
+![NodePerch：默认两秒采样、十分钟历史曲线、多机总览与主机协作](images/hero.png)
 
 ![历史性能曲线：查看 CPU、GPU 最近十分钟的变化，切换主机直接读取缓存](images/history.png)
 
 ![多机总览：CPU、GPU 独立面板与时间轴，直接查看当前使用者和下一位](images/overview.png)
 
-![新增主机协作：使用登记、申请排队、左右留言气泡与自选提醒](images/collaboration.png)
+![到号后可开始使用，取消排队位于本人申请行右侧](images/collaboration.png)
+
+![按主机保留留言草稿与未读提示，输入 @ 选择提醒对象](images/messages.png)
 
 ![添加主机：选择已有 SSH 配置，或手动填写连接信息](images/connect.png)
 
-<sub>图片来自当前版本的真实界面，主机、成员及性能数值均为演示数据。历史曲线保存在本次运行的内存中，退出后清空。</sub>
+<sub>详情、总览、排队和留言截图来自 preview.31 的模拟主机。历史曲线和添加主机的示意图来自 preview.14。</sub>
 
 ## 安装与连接
 
-1. **下载并完整解压** [Windows 运行包](https://github.com/NeilRandy/NodePerch/releases/download/v0.5.0-preview.14/NodePerch-0.5.0-preview.14-win-x64.zip)，双击 `NodePerch.exe`。
+1. **下载并完整解压** [Windows 运行包](https://github.com/NeilRandy/NodePerch/releases)，双击 `NodePerch.exe`。
 2. **添加主机**：选择 SSH 别名，或填写地址、用户名、端口和私钥路径。
 3. **检查登录**：首次连接可点“检查 SSH 登录”，核实主机指纹并完成登录，输入 `exit` 返回看板。
 4. **开始查看**：点击“添加并连接”。持续采集需要密钥或 SSH agent 免交互登录。
 
-> 更新前请先从托盘退出旧版，否则会唤回旧窗口。GitHub 自动生成的 **Source code** 和 **Code → Download ZIP** 只有本仓库的介绍资料，不能运行程序。下载校验见 [SHA-256 文件](https://github.com/NeilRandy/NodePerch/releases/download/v0.5.0-preview.14/NodePerch-0.5.0-preview.14-win-x64.zip.sha256)。
+> 更新前请先从托盘退出旧版，否则会唤回旧窗口。GitHub 自动生成的 **Source code** 和 **Code → Download ZIP** 只有本仓库的介绍资料，不能运行程序。下载后可用同一发行页的 SHA-256 文件校验，见 [全部版本](https://github.com/NeilRandy/NodePerch/releases)。
 
 | 位置 | 要求 |
 | --- | --- |
@@ -37,11 +39,11 @@
 | Windows 主机 | SSH 服务、登录权限、PowerShell 5.1 |
 | NVIDIA GPU 指标 | 远端可执行 `nvidia-smi`；没有支持的显卡仍可查看 CPU 和内存 |
 
-本机无需 Python，远端无需常驻监控服务。软件不保存密码或私钥内容，不修改 SSH 配置。
+本机无需 Python，远端无需常驻监控服务。软件不保存密码或私钥内容，编辑连接时可选择是否同步修改 SSH 配置。
 
 ## 开始协作
 
-连接主机后，点击“协作排队” → 保存昵称 → 启用此主机协作，即可申请排队或留言。默认自动准备共享目录，不同 SSH 账号可能需要管理员配置目录权限；托盘提醒由本人选择开启，默认关闭。
+连接主机后，点击“协作排队” → 保存昵称 → 启用此主机协作，即可在主窗口内切换排队和留言。轮到自己时点击“开始使用”，要退出队列则点击自己申请行末的“取消排队”。默认自动准备共享目录，不同 SSH 账号可能需要管理员配置目录权限；托盘提醒由本人选择开启，默认关闭。
 
 这是整机使用登记与协调功能，不会限制他人登录或运行任务。留言对房间成员可见，指定成员只决定提醒对象。昵称尚不具备严格身份认证，适合相互信任的团队。[查看协作规则与权限说明 →](协作使用指南.md)
 
